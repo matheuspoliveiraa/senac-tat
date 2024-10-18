@@ -19,15 +19,15 @@
 - Navegação: Setas
 
 ## 04. Conhecer e Atualizar o Sistema via Terminal
-sudo
+sudo                     # tornar administrador do  terminal (colocar sudo sempre na frente do script)
 sudo apt update          # Atualizar o sources.list
 sudo apt upgrade         # Atualizar o sistema
 sudo apt full-upgrade    # Forçar atualização completa
 sudo apt dist-upgrade    # Forçar atualização de Kernel
 sudo apt autoremove      # Remover softwares desnecessários
 sudo apt autoclean       # Limpeza do Cache do Apt
-history                   # Histórico de comandos
-sudo reboot               # Reiniciar a máquina
+history                  # Histórico de comandos
+sudo reboot              # Reiniciar a máquina
 
 ## 05. Instalando os Primeiros Softwares via GDEB
 - Google Chrome (.deb) - Site Oficial: https://www.google.com/intl/pt-BR/chrome/
@@ -36,7 +36,7 @@ sudo reboot               # Reiniciar a máquina
 
 ## 06. Instalando os Primeiros Softwares via Terminal
 sudo apt update
-sudo apt install git vim kolourpaint
+sudo apt install (git - vim - kolourpaint)
 
 ## 07. Instalando os Primeiros Softwares via Gerenciador de Aplicativos
 - ttf-mscorefonts-installer
