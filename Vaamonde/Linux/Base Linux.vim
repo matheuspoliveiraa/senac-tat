@@ -1,3 +1,5 @@
+Aula do dia 17/10/2024
+
 # 🐧 Comandos Linux para o terminal
 
 ## ⚙️ Tornar-se administrador
