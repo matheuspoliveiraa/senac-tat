@@ -1,4 +1,4 @@
-# Resumo da Aula - Dia 18/10/2024
+Aula dia 18/10/2024
 
 ## 01. Iniciar o GNU/Linux Mint 21.3 (Virginia)
 - Iniciar a máquina virtual, se logar e aguardar os procedimentos da aula.
@@ -41,6 +41,7 @@ sudo apt install (git - vim - kolourpaint)
 ---
 
 Aula dia 22/10/2024
+
 Observação importante:
 O Microsoft WSL (Windows Subsystem for Linux) permite rodar um ambiente Linux no Windows, sem precisar de uma máquina virtual. (Ele ajuda a ver se a programação vai rodar no Linux ou não.)
 
@@ -101,3 +102,53 @@ Caminho alternativo
 ## 07. Instalando os Primeiros Softwares via Gerenciador de Aplicativos
 - ttf-mscorefonts-installer
 - p7zip-rar
+
+---
+
+Aula dia 29/10/2024
+
+Aula dia 24/10/2024
+Símbolos:
+>> = Redireciona a saída anexando. Se o arquivo não existir, ele cria; se já existir, ele inclui o conteúdo no final da linha. Exemplo: se a linha contém "Itaquera", ele adiciona "Brás" ao final.
+
+| = Conecta a saída de um comando à entrada de outro. Exemplo: ao combinar com tac, ele inverte o conteúdo preservando o número de linhas.
+
+* = O asterisco indica "tudo" em informática.
+
+Alt + PrtScn = Tira print do terminal no Linux.
+
+Comandos
+cat = Visualiza o conteúdo de um arquivo sem precisar abri-lo.
+
+cat -n = Visualiza o conteúdo do arquivo numerado por linha, sem abrir.
+
+tac = Inverte a ordem do comando cat.
+
+tail = Lê o final do arquivo (por padrão, as últimas 10 linhas).
+
+head = Lê o início do arquivo (por padrão, as primeiras 10 linhas).
+
+tail -n(número) = Exibe um número específico de últimas linhas.
+head -n3 = Exibe um número específico de primeiras linhas.
+less = Lê o conteúdo de um arquivo e facilita a visualização e impressão. Obs.: less é melhor que cat -n.
+
+cp = Copia um arquivo. Exemplo: cp vava.txt ramos.txt.
+
+mv = Move ou renomeia um arquivo. Exemplo: mv -v vava.txt vaamonde.md.
+
+rm = Remove arquivos.
+
+rm -Rv TST/ = Remove um diretório de forma recursiva.
+rm -Rfv TST/ = Remove um diretório de forma recursiva e forçada.
+git pull = Visualiza as atualizações (+ para adições e - para remoções) sem atualizar o terminal.
+
+sudo dpkg -i (nome do aplicativo) = Instala e executa o aplicativo desejado.
+
+tree -h (nome do diretório) = Exibe uma estrutura em árvore dos arquivos do diretório.
+
+(nome do aplicativo) . = Abre um arquivo com comando.
+
+Ponto Importante - Cores Novas
+Vermelho = Aplicativo
+Lilás (png) = Foto ou imagem
+
