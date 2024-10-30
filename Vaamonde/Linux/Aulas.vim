@@ -29,6 +29,7 @@ sudo apt autoclean       # Limpeza do Cache do Apt
 history                  # Histórico de comandos
 sudo reboot              # Reiniciar a máquina
 sudo poweroff            # Desligar a máquina
+sudo shutdown -h now     # Desligar a máquina
 
 ## 05. Instalando os Primeiros Softwares via GDEB
 - Google Chrome (.deb) - Site Oficial: https://www.google.com/intl/pt-BR/chrome/
