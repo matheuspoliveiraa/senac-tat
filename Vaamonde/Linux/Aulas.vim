@@ -106,6 +106,85 @@ Caminho alternativo
 - p7zip-rar
 
 ---
+# Aula dia 24/10/2024
+
+## Símbolos:
+
+`>>`  
+  - É melhor que um só `>`, pois redireciona a saída anexando ao arquivo.  
+  - Se o arquivo não existir, ele cria; se já existir, ele adiciona o conteúdo no final.  
+  - Exemplo: Se o arquivo já tiver "Itaquera", ele adiciona "Brás" depois.
+
+`|`  
+  - Preserva o número de linha, podendo inverter com o comando `tac`.  
+  - Envia a saída de um comando para ser a entrada de outro.
+
+`*`  
+  - O asterisco indica "tudo" (*) em informática.
+
+`Alt + PrtScn`  
+  - Captura uma captura de tela do terminal no Linux.
+
+---
+
+## Comandos
+
+- `cat`  
+  - Visualiza o conteúdo de um arquivo sem abrir o arquivo.
+
+- `cat -n`  
+  - Mostra o conteúdo numerado por linha, sem abrir o arquivo.
+
+- `tac`  
+  - Inverte a ordem das linhas do comando `cat`.
+
+- `tail`  
+  - Lê o final do arquivo (padrão: 10 últimas linhas).
+
+- `head`  
+  - Lê o início do arquivo (padrão: 10 primeiras linhas).
+
+- `tail -n<num>`  
+  - Mostra um número específico de últimas linhas.
+
+- `head -n<num>`  
+  - Mostra um número específico de primeiras linhas.
+
+- `less`  
+  - Lê o conteúdo de um arquivo (ideal para impressão e leitura).  
+  - **Obs:** `less` é melhor que `cat -n`.
+
+- `cp`  
+  - Copia arquivos (exemplo: `cp vava.txt ramos.txt`).
+
+- `mv`  
+  - Move ou renomeia um arquivo (exemplo: `mv -v vava.txt vaamonde.md`).
+
+- `rm`  
+  - Remove arquivos (somente arquivos, sem diretórios).
+
+- `rm -Rv TST/`  
+  - Remove diretórios de forma recursiva (`R`) e forçada (`f`).
+
+- `git pull`  
+  - Traz atualizações, mostrando o que foi adicionado (`+`) e removido (`-`), sem atualizar o terminal.
+
+- `sudo dpkg -i <nome_do_aplicativo>`  
+  - Instala e executa o aplicativo desejado.
+
+- `tree -h <diretório>`  
+  - Gera uma árvore de arquivos do diretório mencionado.
+
+- `<nome_do_aplicativo> .`  
+  - Abre um arquivo com o comando especificado.
+
+---
+
+### Ponto importante: Cores no terminal
+- **Vermelho**: Aplicativo
+- **Lilás (png)**: Foto ou imagem
+
+---
 
 Aula dia 29/10/2024
 
@@ -153,4 +232,40 @@ tree -h (nome do diretório) = Exibe uma estrutura em árvore dos arquivos do di
 Ponto Importante - Cores Novas
 Vermelho = Aplicativo
 Lilás (png) = Foto ou imagem
+
+---
+
+# Aula do dia 31/10
+
+## Conhecendo o VIM
+
+- **Para entrar no modo de comando**: `Esc + Shift + :`
+- **Modo de inserção**: Pressione `Insert` para entrar e começar a digitar.
+
+---
+
+## Comandos
+
+- `Esc` : Sair do modo de inserção
+- `q` : Sair
+- `q!` : Sair forçadamente
+- `w` : Salvar (gravar)
+- `wq` : Salvar e sair
+- `Ctrl + Shift + V` : Colar no terminal
+- `x` : Sair salvando
+- `enew` : Criar um novo arquivo do zero
+- `e` : Explorar diretórios
+- `e.` : Listar os diretórios
+- `dd` : Deletar linha
+- `dG` : Deletar tudo
+- `Ctrl + R` : Refazer ação
+- `$` : Ir para o fim da linha
+- `set number` : Listar números de linha
+- `0` : Ir para o início da linha
+
+---
+
+### Diretório temporário
+- `/tmp`
+
 
