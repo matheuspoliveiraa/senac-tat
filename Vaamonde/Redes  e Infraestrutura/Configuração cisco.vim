@@ -64,6 +64,9 @@ show clock
 # 🚪 Sair de todos os modos
 end 
 
+# 🔄 Recarregar. Ele sobe de novo para ver se está ok.
+reload 
+
 # 👥 Criando usuários e senhas de acesso.
 username senac secret 123@senac
 username Matheus password 123@senac
