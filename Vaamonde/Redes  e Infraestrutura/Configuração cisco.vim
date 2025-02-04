@@ -58,6 +58,9 @@ disable
 # 🔍 Visualizando as configurações (SEMPRE NO MODO ENABLE)
 show running-config 
 
+# 🔍 Visualizando a Data e Hora
+show clock
+
 # 🚪 Sair de todos os modos
 end 
 
