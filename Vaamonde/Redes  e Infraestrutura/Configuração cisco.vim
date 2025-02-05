@@ -79,3 +79,83 @@ username admin privilege 15 secret 123@senac
 
 # ℹ️ Observação:
 # Privilegio: Quanto mais privilégio, mais ações podem ser feitas dentro do equipamento.
+
+_______________________________________________________________________________________________________________________________________________________________
+
+# 🔧 CONFIGURAR PARA ACESSAR REMOTAMENTE (VTY) 🔧 #
+
+enable
+configure terminal
+
+# ✨ Configurar linhas ✨ #
+line vty 0 4 
+  login local 
+  password 123@senac 🔒
+  logging synchronous 🖥️
+  exec-timeout 5 30 ⏳
+  transport input ssh 🌐
+end 
+
+copy running-config startup-config 📂
+
+_______________________________________________________________________________________________________________________________________________________________
+
+# 🌐 CONFIGURAR UM IP NO SWITCH (SVI) 🌐 #
+
+enable
+configure terminal
+
+# 🔑 Configurar o Gateway Padrão (Gateway permite sair da rede, por exemplo, conferir o roteador/switch de São Paulo com o equipamento no Rio) 🔑
+ip default-gateway 192.168.1.254 🏙️
+
+# 🔧 Configurar a SVI do Switch 🔧
+interface vlan 1
+
+# 📝 Configurar a Descrição 📝
+description interface de SVI ✨
+
+# 🌍 Configurar o Endereço IPv4 🌍
+ip address 192.168.1.250 255.255.255.0 (não é fixo, é o da rede) 📡
+
+# 🚀 Iniciar a Interface SVI 🚀
+no shutdown 🔓
+
+end
+
+write (sakvar) 💾
+
+show rinning-config
+
+# mostrar todos as portas do Switch 🔍
+show ip interface brief
+
+# Mostrar as VLANS que existe no meu Switch 🔍
+show vlan brief
+
+_______________________________________________________________________________________________________________________________________________________________
+
+# 🔐 CONFIGURAR SERVIÇO DE ACESSO REMOTO (SSH) 🔐 #
+
+enable
+configure terminal
+
+# 🌐 Configurar o Domínio FQDN (hostname.domain.br) 🌐
+ip domain-name senac.br (nome fictício) 🏷️
+
+# 🔑 Habilitar o SSH Server 🔑
+crypto key generate rsa general-keys modulus 1024 🔒
+
+# 🔄 Habilitar a versão 2 (versão atual para conexões remotas seguras) 🔄
+ip ssh version 2 🌍
+
+# ⏳ Tempo de Inatividade ⏳
+ip ssh time-out 60 ⏰
+
+# 🔢 Número máximo de conexões 🔢
+ip ssh authentication-retries 2 🔒
+
+end
+
+write 💾
+
+
