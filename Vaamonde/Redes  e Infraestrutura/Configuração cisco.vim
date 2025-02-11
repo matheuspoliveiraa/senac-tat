@@ -158,4 +158,106 @@ end
 
 write 💾
 
+_______________________________________________________________________________________________________________________________________________________________
 
+# 🚀 CONFIGURAR ROTEADOR CISCO 🚀 #
+
+enable
+
+# ⏰ Configurar Data e Hora ⏰
+clock set 19:30:00 11 feb 2025 📆
+
+configure terminal
+
+# 🏷️ Definir Nome do Roteador 🏷️
+hostname rt-01
+
+# 🔒 Configurações de Segurança 🔒
+service password-encryption 🔑
+service timestamps log datetime msec 🕒
+service timestamps debug datetime msec 🛠️
+no ip domain-lookup 🚫
+
+# ⚠️ Banner de Aviso ⚠️
+banner motd #AVISO: Cuidado# 🛑
+
+# 🔑 Definir Políticas de Senha 🔑
+security passwords min-length  
+enable secret 123@senac  
+
+# 👤 Configurar Usuários 👤
+username senac secret 123@senac  
+username matheus password 123@senac  
+username admin privilege 15 secret 123@senac  
+
+# ❌ Comandos Úteis ❌
+no  # Remover alguma configuração ou desativar.  
+do  # Permite executar comandos sem sair do nível atual.  
+
+# 🌐 Configurar Domínio 🌐
+ip domain-name senac.br  
+
+# 🔐 Configurar SSH 🔐
+crypto key generate rsa general-key modulus 1024 🔑  
+ip ssh version 2 🌍  
+ip ssh time-out 60 ⏳  
+ip ssh authentication-retries 2 🚫  
+
+# 🛡️ Bloqueio de Tentativas de Login 🛡️
+login block-for 120 attempts 2 within 60 🔒  
+
+# 🖥️ Configuração da Linha de Console 🖥️
+line console 0  
+  login local  
+  logging synchronous 📝  
+  exec-timeout 5 30 ⏳  
+exit  
+
+# 🌍 Configuração das Linhas Virtuais (VTY) 🌍
+line vty 0 4  
+  login local  
+  logging synchronous 📝  
+  exec-timeout 5 30 ⏳  
+  transport input ssh 🌐  
+end  
+
+write 💾
+
+_______________________________________________________________________________________________________________________________________________________________
+
+# 🌐 CONFIGURAR INTERFACE DO ROTEADOR 🌐 #
+
+enable  
+configure terminal  
+
+# 🔌 Configurar Interface de Rede 🔌  
+interface gigabitEthernet 0/0  
+  description Interface de Gateway da Rede LAN 🏠  
+  ip address 192.168.1.254 255.255.255.0 🌍  
+  # Define o IP e a máscara da interface  
+
+# 🚀 Ativar Interface 🚀  
+no shutdown  
+# Ativa a interface para funcionamento  
+
+write 💾  
+# Salva as configurações  
+
+# 🔎 Comandos para Verificação (Dentro do Roteador) 🔎  
+show running-config 📜  
+# Exibe a configuração em execução  
+show ip interface brief 🖥️  
+# Mostra o status das interfaces  
+ping 192.168.1.250 📡  
+ping 192.168.1.251 📡  
+ping 192.168.1.1 📡  
+# Testa conectividade com diferentes IPs  
+show ip route 🛣️  
+# Exibe a tabela de roteamento  
+
+# 🌍 Testes Externos (Fora do Roteador) 🌍  
+ping 192.168.1.254 🌐  
+# Testa conexão com o roteador  
+
+ssh -l admin 192.168.1.254 🔑  
+# Acessa o roteador via SSH pela LAN  
