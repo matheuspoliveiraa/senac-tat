@@ -261,3 +261,26 @@ ping 192.168.1.254 🌐
 
 ssh -l admin 192.168.1.254 🔑  
 # Acessa o roteador via SSH pela LAN  
+
+_______________________________________________________________________________________________________________________________________________________________
+
+# 🌐 CONFIGURAR DNS NO ROTEADOR 🌐 #
+
+enable  
+configure terminal  
+
+# 🔍 Ativar Resolução de Nomes 🔍  
+ip domain-lookup  
+# Permite que o roteador resolva nomes de domínio para IPs  
+
+# 📡 Definir Servidor DNS 📡  
+ip name-server 192.168.1.1  
+# Configura um servidor DNS interno ou externo  
+
+# 🌍 Criar Entrada de Host 🌍  
+ip host google 8.8.8.8  
+# Associa o nome "google" ao IP 8.8.8.8  
+
+write 💾  
+
+
