@@ -283,6 +283,384 @@ ip host google 8.8.8.8
 
 write 💾  
 
+_______________________________________________________________________________________________________________________________________________________________
+
+BACKUP SWITCH CISC CATALYST 2960 LAYER 2
+
+ping 192.168.1.250
+ping sw-01
+ssh -l admin sw-01
+
+enable
+  show version # Informações da caixa. (roteador ou switch)
+  show boot
+  show flash: # Verificar o HD
+    2960-lanbasek9-mz.150-2.SE4.bin
+  copy running-config startup-config
+  copy startup-config flash:
+  show running-config (copiar e colar no VSCODE e salvar como arquivo TXT, lembrando de trocar a senha)
+  ping 192.1681.1
+  copy startup-config tftp:
+    192.168.1.1 (servidor)
+    sw-01-config (nome do arquivo)
+  show flash:
+  copy flash: tftp:
+    2960-lanbasek9-mz.150-2.SE4.bin (o que quero salvar)
+    192.168.1.1 (servidor)
+    Nunca mudar o nome do arquivo.
 
 
+
+
+
+
+
+>>>>>>Copia segura abaixo:<<<<<<<<
+
+!
+version 15.0
+service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname sw-01
+!
+enable secret 123@senac
+!
+!
+crypto key generate rsa general-keys modulus 1024
+ip ssh version 2
+ip ssh authentication-retries 2
+ip ssh time-out 60
+ip domain-name senac.br
+ip host google 8.8.8.8 
+ip host rt-01 192.168.1.254 
+ip name-server 192.168.1.1
+!
+username Matheus privilege 123@senac
+username admin secret 123@senac
+username senac secret 123@senac
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+!
+interface FastEthernet0/2
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ description interface de SVI
+ ip address 192.168.1.250 255.255.255.0
+no shutdown
+!
+ip default-gateway 192.168.1.254
+!
+banner motd ^CAVISO: CUIDADO^C
+!
+!
+!
+line con 0
+ password 123@senac
+ logging synchronous
+ login local
+ exec-timeout 5 30
+!
+line vty 0 4
+ exec-timeout 5 30
+ password 123@senac
+ logging synchronous
+ login local
+ transport input ssh
+line vty 5 15
+ login
+!
+!
+!
+!
+end
+
+
+>>>>>>>OUTRO ARQUIVO<<<<<<<<<<<
+
+!
+version 15.0
+service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname sw-02
+!
+enable secret 123@senac
+!
+!
+!
+crypto key generate rsa general-keys modulus 1024
+ip ssh version 2
+ip ssh authentication-retries 2
+ip ssh time-out 60
+ip domain-name senac.br
+ip host google 8.8.8.8 
+ip name-server 192.168.1.1
+!
+username Matheus secret 123@senac
+username admin secret 123@senac
+username senac secret 123@senac
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+!
+interface FastEthernet0/2
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ description interface de SVI
+ ip address 192.168.1.251 255.255.255.0
+no shutdown
+!
+ip default-gateway 192.168.1.254
+!
+banner motd ^CAVISO: CUIDADO^C
+!
+!
+!
+line con 0
+ password 123@senac
+ logging synchronous
+ login local
+ exec-timeout 5 30
+!
+line vty 0 4
+ exec-timeout 5 30
+ password 123@senac
+ logging synchronous
+ login local
+ transport input ssh
+line vty 5 15
+ login
+!
+!
+!
+!
+end
+
+
+
+
+_______________________________________________________________________________________________________________________________________________________________
+
+BACKUP ROUTER CISCO 1941
+
+enable
+  copy running-config startup-config
+  copy startup-config flash:
+  show flash: 
+    c1900-universalk9-mz.SPA.151-4.M4.bin
+  show running-config
+
+>>>>>>>>>>>>>>ANEXO EMBAIXO<<<<<<<<<<<<<<<<<<<
+
+!
+version 15.1
+service timestamps log datetime msec
+service timestamps debug datetime msec
+service password-encryption
+security passwords min-length 8
+!
+hostname rt-01
+!
+login block-for 120 attempts 2 within 60
+!
+!
+enable secret 123@senac
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+username admin privilege 15 secret 123@senac
+username matheus password 123@senac
+username senac secret 123@senac
+!
+!
+license udi pid CISCO1941/K9 sn FTX1524ZE8P-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+crypto key generate rsa general-keys modulus 1024
+ip ssh version 2
+ip ssh authentication-retries 2
+ip ssh time-out 60
+ip domain-name senac.br
+ip host google 8.8.8.8 
+ip name-server 192.168.1.1
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ description interface de gateway da Rede Lan
+ ip address 192.168.1.254 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Vlan1
+ no ip address
+ no shutdown
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+ip access-list extended sl_def_acl
+ deny tcp any any eq telnet
+ deny tcp any any eq www
+ deny tcp any any eq 22
+ permit tcp any any eq 22
+!
+banner motd ^CAVISO: Cuidado^C
+!
+!
+!
+!
+line con 0
+ exec-timeout 5 30
+ logging synchronous
+ login local
+!
+line aux 0
+!
+line vty 0 4
+ exec-timeout 5 30
+ logging synchronous
+ login local
+ transport input ssh
+!
+!
+!
+end
 
