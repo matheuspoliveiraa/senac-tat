@@ -664,3 +664,98 @@ line vty 0 4
 !
 end
 
+_______________________________________________________________________________________________________________________________________________________________
+
+# 🏷️ Criando e nomeando VLAN
+
+# 🔑 Entrar no modo privilegiado
+enable 
+
+# ⚙️ Entrar no modo de configuração global
+configure terminal 
+
+# 🏷️ Criar VLAN 10
+vlan 10 
+
+# ✏️ Nomear VLAN como "FIN"
+name FIN 
+
+# 🚪 Sair do modo de configuração
+en
+
+# 💾 Salvar as configurações permanentes
+write 
+
+# 🎛️ Configurando interface para VLAN específica
+
+# 🔑 Entrar no modo privilegiado
+enable 
+
+# ⚙️ Entrar no modo de configuração global
+configure terminal 
+
+# 🔌 Configurar um intervalo de interfaces (GigabitEthernet 1/0/10 até 1/0/19)
+interface range GigabitEthernet 1/0/10 - 19 
+
+# 📝 Adicionar descrição às interfaces
+description Interface dos Servidores  
+
+# 🔗 Definir modo de porta como acesso
+switchport mode access 
+
+# 🚫 Desativar negociação automática de encapsulamento
+switchport nonegotiate  
+
+# 📌 Atribuir VLAN 50 à interface
+switchport access vlan 50 
+
+# 🚪 Sair do modo de configuração
+end 
+
+# 💾 Salvar configurações permanentes
+write 
+
+_______________________________________________________________________________________________________________________________________________________________
+
+Configurar Switch avançado.
+
+Configurar trunk:
+
+enable
+configure terminal 
+interface range gigabitEthernet 1/0/01 - 9
+description interface de Trunk
+switchport mode trunk
+switchport nonegotiate
+end
+write
+
+Configurar switch para virar router também:
+
+enable 
+configure terminal 
+ip routing
+show ip route
+interface vlan 10
+description interface de gateway VLAN-10
+ip address 172.16.0.158 255.255.255.224
+no shutdown
+end
+wr
+
+Configuração para acessar remoto:
+
+enable
+configure terminal
+ip default-gateway 172.16.0.97
+end
+write
+
+Configurar para solicitarem o IP automatico:
+
+enable
+configure terminal
+interface vlan 10
+ip helper-address 172.16.0.33
+end
+write
