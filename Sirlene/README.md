@@ -1,4 +1,4 @@
-📚 # Programação e Lógica de Programação 📚
+📚 # Programação e Lógica de Programação # 📚
 
 Repositório com atividades e projetos feitos nas aulas de Programação e Lógica, com a professora Sirlene.
 
