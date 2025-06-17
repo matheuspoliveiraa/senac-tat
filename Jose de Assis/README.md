@@ -1,14 +1,6 @@
-📚 # Programação e Lógica de Programação # 📚
+# 📂 Aulas do Professor José
 
-Repositório com atividades e projetos feitos nas aulas de Programação e Lógica, com os professores Sirlene e José de Assis.
+📚 Repositório com conteúdos das aulas do curso Técnico em Informática – Período Noturno.
 
-## Curso
-
-- Senac Tatuapé  
-- Turma da noite  
-- Técnico em Informática  
-- Semestre de Programação
-
-## Professor
-
-- José de Assis
+## 📌 Sobre
+Aqui você encontrará materiais, anotações e exercícios das aulas ministradas pelo Professor José.
