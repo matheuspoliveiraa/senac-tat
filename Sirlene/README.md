@@ -1,14 +1,6 @@
-📚 # Programação e Lógica de Programação # 📚
+# 📂 Aulas da Professora Sirlene
 
-Repositório com atividades e projetos feitos nas aulas de Programação e Lógica, com a professora Sirlene.
+📚 Repositório com conteúdos das aulas do curso Técnico em Informática – Período Noturno.
 
-## Curso
-
-- Senac Tatuapé  
-- Turma da noite  
-- Técnico em Informática  
-- Semestre de Programação
-
-## Professora
-
-- Sirlene
+## 📌 Sobre
+Aqui você encontrará materiais, anotações e exercícios das aulas ministradas pela Professora Sirlene.
