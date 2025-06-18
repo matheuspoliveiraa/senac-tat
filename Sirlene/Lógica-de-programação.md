@@ -1,12 +1,12 @@
-### 📚 Raciocínio Lógico – Profª Sirlene
+## 📚 Raciocínio Lógico – Profª Sirlene
 
 ---
 
-## 🗓 Data: 17/06/2025
+### 🗓 Data: 17/06/2025
 
 ---
 
-## 🧠 Tema da Aula  
+### 🧠 Tema da Aula  
 **Raciocínio Lógico**
 
 > O que é raciocínio lógico?
@@ -15,14 +15,14 @@
 
 ---
 
-## 📝 Tópicos Abordados:
+### 📝 Tópicos Abordados:
 - Exercícios de raciocínio lógico  
 - Interpretação de texto  
 - Detalhamento de rotinas (exemplo: abrir uma porta)
 
 ---
 
-## 💡 Pontos Importantes:
+### 💡 Pontos Importantes:
 > Tudo é uma rotina — desde abrir uma porta até programar um sistema.  
 > Por exemplo, abrir uma porta não é apenas "andar e abrir". Você precisa:  
 > 1. Andar até a porta  
@@ -33,7 +33,7 @@
 
 ---
 
-## 🎯 Desafio / Exercício  
+### 🎯 Desafio / Exercício  
 **Qual é a sequência lógica para levar seu filho de táxi até a escola?**
 
 1. Sair de casa  
@@ -72,7 +72,7 @@
 
 ---
 
-## 🧩 Desafio de Lógica – Sequência de Palavras
+### 🧩 Desafio de Lógica – Sequência de Palavras
 
 **Sequência:**
 1. Camiseta  
@@ -94,7 +94,7 @@ E) Publicação
 
 ---
 
-## 🤴 Charada – Nome do Rei
+### 🤴 Charada – Nome do Rei
 
 **Enigma:**  
 _"Com quinhentos começa.  
@@ -113,5 +113,5 @@ Junte tudo e o nome do grande rei, na sua frente surgirá."_
 
 ---
 
-## 📌 Observações Finais:
+### 📌 Observações Finais:
 - Lógica é **prática** e **repetição**. Quanto mais você treina, melhor desenvolve sua capacidade de resolver problemas.
