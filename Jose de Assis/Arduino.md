@@ -1,16 +1,3 @@
-Link usado na aula: https://www.tiobe.com/tiobe-index/
-
-link video aula - o que é arduino: manual do mundo.
-
-link arduino virtual - tinkedcad.com 
-
-Site do professor: https://roboticapratica.com.br
-
-Arduino trabalha com potencia de 5 volts.
-
-site do software: https://arduino.cc/en/software/
-
-
 ### O que é Arduino?
 ---
 Arduino é uma plataforma de prototipagem eletrônica de hardware e software livre, ou seja, você pode criar seus próprios projetos de forma simples, prática e com baixo custo. Ele é ideal para quem está começando, mas também é poderoso o suficiente para projetos mais avançados.
@@ -32,3 +19,19 @@ Documentação básica do arduino (sempre colocar no começo)
 
 OUTPUT - Saída
 HIGH - Ligar
+
+---
+
+## Link video aula (materia)
+
+> Link usado na aula: [Ranking de progamadores](https://www.tiobe.com/tiobe-index/)
+> link video aula - [o que é arduino: manual do mundo.](https://www.youtube.com/watch?v=sv9dDtYnE1g)
+> link arduino virtual - [tinkedcad](https://www.tinkercad.com/dashboard)
+> Site do professor: [Site professor](https://roboticapratica.com.br)
+> site do software: [Software Arduino](https://arduino.cc/en/software/)
+
+---
+### Ponto importante na aula
+
+> Arduino trabalha com potencia de 5 volts.
+
