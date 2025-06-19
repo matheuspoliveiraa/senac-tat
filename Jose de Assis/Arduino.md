@@ -26,3 +26,9 @@ Documentação básica do arduino (sempre colocar no começo)
   @author [seu nome]
   @link [link de um projeto seu, página ou github]
 */
+
+---
+### Palavras básicas no arduino.
+
+OUTPUT - Saída
+HIGH - Ligar
