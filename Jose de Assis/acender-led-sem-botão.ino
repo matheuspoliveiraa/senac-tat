@@ -1,5 +1,5 @@
 /**
-  Pisca LED 
+  Acender LED 
   @author Matheus Pinheiro de Oliveira
   @link https://github.com/matheuspoliveiraa
 */
@@ -17,7 +17,7 @@ void loop() {
 ---
 
   /**
-  Pisca LED 
+  Acender LED 
   @author Matheus Pinheiro de Oliveira
   @link https://github.com/matheuspoliveiraa
 */
