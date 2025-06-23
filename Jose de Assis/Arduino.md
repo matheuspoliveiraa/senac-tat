@@ -24,11 +24,11 @@ HIGH - Ligar
 
 ## Link video aula (materia)
 
-> Link usado na aula: [Ranking de progamadores](https://www.tiobe.com/tiobe-index/)
-> link video aula - [o que é arduino: manual do mundo.](https://www.youtube.com/watch?v=sv9dDtYnE1g)
-> link arduino virtual - [tinkedcad](https://www.tinkercad.com/dashboard)
-> Site do professor: [Site professor](https://roboticapratica.com.br)
-> site do software: [Software Arduino](https://arduino.cc/en/software/)
+1º Link usado na aula: [Ranking de progamadores](https://www.tiobe.com/tiobe-index/)
+2º link video aula - [o que é arduino: manual do mundo.](https://www.youtube.com/watch?v=sv9dDtYnE1g)
+3º link arduino virtual - [tinkedcad](https://www.tinkercad.com/dashboard)
+4º Site do professor: [Site professor](https://roboticapratica.com.br)
+5º site do software: [Software Arduino](https://arduino.cc/en/software/)
 
 ---
 ### Ponto importante na aula
