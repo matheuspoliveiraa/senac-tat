@@ -1,28 +1,28 @@
 Algoritmo "Dobro"
-// Disciplina   : Logica de programação
+// Disciplina   : Logica de programaÃ§Ã£o
 // Professora   : Sirlene
-// Descrição   : Calculadora de potenciação
-// Autor(a)    :Matheus Pinheiro de Oliveira
+// DescriÃ§Ã£o   : Calculadora de dobrar o valor
+// Autor(a)    : Matheus Pinheiro de Oliveira
 // Data atual  : 28/06/2025
 Var
-// Seção de Declarações das variáveis
+// SeÃ§Ã£o de DeclaraÃ§Ãµes das variÃ¡veis
    nome: caractere
    n1, n2, soma: real
 
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc...
-   escreval ("Bem-vindo a calculadora de potenciação! Qual seu nome? ")
+// SeÃ§Ã£o de Comandos, procedimento, funÃ§Ãµes, operadores, etc...
+   escreval ("Bem-vindo a calculadora de potenciaÃ§Ã£o! Qual seu nome? ")
    leia (nome)
    escreva ("")
 
-   escreva ("Escreva um número qualquer: ")
+   escreva ("Escreva um nÃºmero qualquer: ")
    leia (n1)
-   escreva ("Escreva outro número: ")
+   escreva ("Escreva outro nÃºmero: ")
    leia (n2)
    escreva ("")
 
    soma <- (n1+n2)*2
 
-   escreva ("O resultado final será: ", soma)
+   escreva ("O resultado final serÃ¡: ", soma)
    
    Fimalgoritmo
