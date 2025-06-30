@@ -11,7 +11,7 @@ Var
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc...
-   escreval ("Bem-vindo a calculadora de potenciação! Qual seu nome? ")
+   escreval ("Bem-vindo a calculadora para dobrar o valor! Qual seu nome? ")
    leia (nome)
    escreva ("")
 
