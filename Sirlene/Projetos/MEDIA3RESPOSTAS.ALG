@@ -1,36 +1,36 @@
 Algoritmo "media3respostas"
 //
 //
-// Descrição   : Fazendo media
+// DescriÃ§Ã£o   : Fazendo media
 // Autor(a)    : Matheus Pinheiro de Oliveira
 // Data atual  : 02/07/2025
 Var
-   // Seção de Declarações das variáveis
+   // SeÃ§Ã£o de DeclaraÃ§Ãµes das variÃ¡veis
    n1,n2,n3,media: real
 
 
 Inicio
-   // Seção de Comandos, procedimento, funções, operadores, etc...
-   escreval ("**** Programa de média! ****")
+   // SeÃ§Ã£o de Comandos, procedimento, funÃ§Ãµes, operadores, etc...
+   escreval ("**** Programa de mÃ©dia! ****")
    escreval  ()
 
-   escreval ("Digite sua 1ª nota")
+   escreval ("Digite sua 1Âª nota")
    leia (n1)
-   escreval ("Digite sua 2ª nota")
+   escreval ("Digite sua 2Âª nota")
    leia (n2)
-   escreval ("Digite sua 3ª nota")
+   escreval ("Digite sua 3Âª nota")
    leia (n3)
 
    media <- (n1+n2+n3)/3
 
    se media>=7 entao
-      escreval ("Parabéns você foi aprovado! ")
+      escreval ("ParabÃ©ns vocÃª foi aprovado! ")
    senao
-      se (media<7) e (>=5)   entao
-         escreval ("Você está de recuperação. ")
+      se (media<7) e (media>=5)   entao
+         escreval ("VocÃª estÃ¡ de recuperaÃ§Ã£o. ")
       senao
       se media<5 entao
-         escreva ("Você foi reprovado. ")
+         escreva ("VocÃª foi reprovado. ")
 
       fimse
    fimse
