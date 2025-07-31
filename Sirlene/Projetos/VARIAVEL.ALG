@@ -1,17 +1,15 @@
-Algoritmo "OláMundo"
+Algoritmo "Variavel"
 // 
 //  
-// Descrição   : Experimentando o VisualG pela primeira vez
+// Descrição   : Aprendendo váriaveis
 // Autor(a)    : Matheus Pinheiro de Oliveira
 // Data atual  : 26/06/2025
 Var
 // Seção de Declarações das variáveis 
-   msg: caractere
-
+   nome: caractere
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
-   msg <- "Olá Mundo!"
-   Escreval (msg)
-
+   Leia (nome)
+   escreva ("Muito prazer, ", nome)
 Fimalgoritmo
